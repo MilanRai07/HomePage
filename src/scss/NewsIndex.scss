@@ -1,0 +1,70 @@
+@import 'mixin.scss';
+
+.news-index {
+    padding: 80px null;
+
+    .news-container {
+        @include flex(center, 48px);
+        flex-direction: column;
+
+        .news-header {
+            @include flex(center, 48px);
+            flex-direction: column;
+            text-align: center;
+            flex-wrap: wrap;
+
+            h2 {
+                @include font(600, 32px, 40px, #24272E, null);
+            }
+
+            p {
+                @include font(400, 18px, 27px, #667085, null);
+            }
+        }
+
+        .news-card-container {
+            @include flex(center, 19px);
+            flex-wrap: wrap;
+        }
+    }
+
+    .view-button {
+        @include flex(center, null);
+        margin-top: 32px;
+        padding: 10px 16px 10px 16px;
+
+        button {
+            @include btn(44px, 135px, 4px, #1D6FA3, null);
+            transition: 0.6s ease-out;
+            @include flex(center, null);
+
+            p {
+                @include font(700, 16px, 24px, #24272E, 130px);
+            }
+
+            &:hover {
+                box-shadow: inset 250px 0 0 #A276FF;
+                ;
+
+                p {
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width:764px) {
+    .news-container {
+        .news-header {
+            h2 {
+                @include font(600, 32px, 40px, black, 768px);
+            }
+
+            p {
+                @include font(400, 20px, 30px, #667085, 708px);
+            }
+        }
+    }
+}

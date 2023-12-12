@@ -1,0 +1,67 @@
+@import 'mixin.scss';
+
+.searchbox {
+  z-index: 10;
+  margin: auto;
+  position: relative;
+  width: 700px;
+  height: 56px;
+  position: relative;
+  @include position(0, 40%, 0, 0);
+
+  .search-input {
+    @include position(50%, null, 5px, null);
+    transform: translateY(-50%);
+  }
+
+  input {
+    @include inputbox(625px, 47px, 12px, none, 5px);
+    padding-left: 50px;
+    object-fit: cover;
+
+    &::placeholder {
+      @include font(400, 16px, 20px, null, null);
+    }
+
+    &:focus {
+      @include focus();
+    }
+  }
+
+  .search-close {
+    @include position(1%, null, null, 5px);
+    transform: translateY(-100%);
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width:798px) {
+  .searchbox {
+    width: 600px;
+
+    input {
+      @include inputbox(500px, 47px, 12px, none, 5px);
+      padding-left: 60px;
+    }
+  }
+
+}
+
+@media only screen and (max-width:681px) {
+  .searchbox {
+    width: 400px;
+
+    input {
+      @include inputbox(300px, 47px, 12px, none, 5px);
+      padding-left: 60px;
+    }
+  }
+
+}
+
+@media only screen and (max-width:600px) {
+  .searchbox {
+    @include position(0, 50%, 0, 0);
+  }
+
+}

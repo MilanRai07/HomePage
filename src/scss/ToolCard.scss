@@ -1,0 +1,41 @@
+@import 'mixin.scss';
+
+.card {
+  background: #F9F9FF;
+  @include cardfeature(352px, 337px, 20px, 0px, 30px); //width:352px
+  overflow: hidden;
+
+  .icon-container {
+    @include flex(null, 5px);
+
+    .icon {
+      @include Size(65.5px, 65.5px); //width:352px
+      border-radius: 18px;
+      background: #F8F1FF;
+      @include flex(center, null);
+    }
+  }
+
+  .card-body {
+    h3 {
+      @include font(600, 24px, 36px, #24272E, null);
+      margin-top: 22px;
+    }
+
+    p {
+      @include font(400, 16px, 24px, #7C7D82, null);
+      margin-top: 12px;
+    }
+  }
+
+  .card-btn {
+    @include font(700, 16px, 24px, #1D6FA3, null);
+    @include flex(flex-start, 4px);
+    margin-top: 51px;
+
+    &:hover {
+      cursor: pointer;
+      color: #682bd7;
+    }
+  }
+}

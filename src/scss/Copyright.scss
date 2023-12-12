@@ -1,0 +1,30 @@
+@import 'mixin.scss';
+
+.copyright-container {
+    @include flex(space-around, null);
+    @include section(null, 94px, 32px, 164px);
+    position: relative;
+
+    h4 {
+        @include font(400, 14px, 21px, #7C7D82, null);
+    }
+
+    .copyright-arrow {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        position: absolute;
+        right: 24px;
+        top: 22.467px;
+        border-radius: 50%;
+        @include flex(center, null);
+        cursor: pointer;
+        border: 1px solid #A276FF;
+        background-color: #F9F9FF;
+
+        &:hover{
+            background-color: #e9e9fc;
+        }
+    }
+}

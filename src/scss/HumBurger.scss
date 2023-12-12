@@ -1,0 +1,49 @@
+@import 'mixin.scss';
+
+.ham-container {
+    @include cardfeature(100%, 6.5rem, 0px, null, null);
+    @include position(3rem, 0, 0, 0);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    z-index: 4;
+    background-color: #fcfbfb;
+    text-align: center;
+    width: 100%;
+
+    div {
+        @include font(bold, 16px, 24px, black, null);
+        padding: 5px 0px;
+        border-bottom: 1px solid rgb(34, 109, 170);
+
+        &:hover {
+            background-color: #87CEEB;
+            color: black;
+
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .ham-container {
+        height: 5rem;
+
+        div {
+            @include font(bold, 10px, 20px, black, null);
+            padding: 3px 0px;
+            border-bottom: 1px solid rgb(34, 109, 170);
+
+            &:hover {
+                background-color: #87CEEB;
+                color: black;
+
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width:707px) {
+    .ham-container {
+        display: none;
+    }
+}

@@ -1,0 +1,45 @@
+@import 'mixin.scss';
+
+.news-card {
+  background: #F9F9FF;
+  @include cardfeature(357px, 470px, 20px, 0px, 20px); //width:352px
+  overflow: hidden;
+
+  .news-imgContainer {
+    @include Size(100%, 201px); //width:352px
+    overflow: hidden;
+    border-radius: 16px;
+
+    .news-img {
+      @include ImgInside();
+      transition: 0.7s all ease-in-out;
+
+      &:hover {
+        transform: scale(1.09);
+      }
+    }
+  }
+
+  .cards-body {
+    h3 {
+      @include font(600, 24px, 36px, #24272E, null);
+      margin-top: 20px;
+    }
+
+    p {
+      @include font(400, 16px, 24px, #505258, null);
+      margin-top: 8px;
+    }
+  }
+
+  .news-btn {
+    @include font(700, 16px, 24px, #1D6FA3, null);
+    @include flex(flex-start, 4px);
+    margin-top: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: #682bd7;
+    }
+  }
+}

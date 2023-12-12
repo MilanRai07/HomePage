@@ -1,0 +1,47 @@
+@import 'mixin.scss';
+
+.camp-card {
+  @include cardfeature(100%, 596px, 20px, 0px, null); //width:352px
+  overflow: hidden;
+  box-shadow: 5px 5px 10px 5px #ccb3b3;
+
+  .camp-imgContainer {
+    @include Size(100%, 352px); //width:352px
+    overflow: hidden;
+
+    .CampImg {
+      @include ImgInside();
+      transition: 0.7s all ease-in-out;
+
+      &:hover {
+        transform: scale(1.09);
+      }
+    }
+  }
+
+  .camp-detail {
+    padding: 24px;
+
+    h3 {
+      @include font(700, 18px, 27px, #24272E, 176px);
+      margin-bottom: 15px;
+      min-height: 27px;
+    }
+
+    .camp-texts {
+      @include Size(290px, 105px);
+      margin-bottom: 15px;
+    }
+
+    .camp-btn {
+      @include font(700, 16px, 24px, #1D6FA3, 88px);
+      @include flex(space-between, 4px);
+      width: 116px;
+
+      &:hover {
+        cursor: pointer;
+        color: #682bd7;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'mixin.scss';
+
+.slider-container {
+    @include section(100%, 200px, 80px, 160px);
+    margin-top: 80px; //width to be checked future
+    @include flex(center, 65px);
+    
+
+    .slider-row {
+        @include flex(center, 65px);
+    }
+    .arrow{
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width:1179px){
+    .slider-container{
+        @include flex(space-around, 15px);
+        .slider-row{
+            @include flex(center,55px);
+            div:nth-child(1){
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width:880px){
+    .slider-container{
+        margin-top: 60px;
+        .slider-row{
+            @include flex(center,15px);         
+                div:nth-child(2){
+                    display: none;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width:528px){
+        .slider-container{
+            margin-top: 60px;
+            .slider-row{
+                @include flex(center,15px);         
+                    div:nth-child(3){
+                        display: none;
+                    }
+                }
+            }
+        }
+

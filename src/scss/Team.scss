@@ -1,0 +1,23 @@
+@import 'mixin.scss';
+
+.team-name {
+  .team-img-container {
+    @include Size(100%, 415px);
+    overflow: hidden;
+    border-radius: 16px;
+
+    .team-img {
+      @include ImgInside();
+      transition: 0.7s all ease-in-out;
+
+      &:hover {
+        transform: scale(1.09);
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 24px;
+    @include font(600, 24px, 32px, #24272E, 305px);
+  }
+}

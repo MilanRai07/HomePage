@@ -1,0 +1,71 @@
+@import 'mixin.scss';
+
+.team-container {
+  padding: 96px 160px;
+  @include flex(center, 54px);
+  align-items: flex-start;
+
+  .team-detail {
+    @include Size(368px, auto);
+    max-width: 368px;
+
+    h3 {
+      @include font(600, 32px, 40px, #24272E, 100%);
+      margin-bottom: 20px;
+      min-height: 27px;
+    }
+
+    .team-text {
+      @include Size(100%, auto);
+      @include font(400, 18px, 27px, #505258, 100%);
+      margin-bottom: 48px;
+    }
+
+    .team-btn {
+      @include font(700, 16px, 24px, #1D6FA3, 88px);
+      @include flex(space-between, 4px);
+      width: 116px;
+
+      &:hover {
+        cursor: pointer;
+        color: #F48024;
+      }
+    }
+  }
+
+  .team-subcontainer {
+    @include gridmost(2, 1fr, 40px, 32px);
+
+    div:nth-child(2),
+    div:nth-child(4) {
+      position: relative;
+      top: 30%;
+    }
+  }
+
+}
+
+@media only screen and (max-width:1154px) {
+  .team-container {
+    @include flex(center, 54px);
+    flex-direction: column;
+
+    .team-detail {
+      text-align: center;
+
+      .team-btn {
+        margin: 0 auto;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width:690px) {
+  .team-container {
+    .team-subcontainer {
+      @include flex(center, 10px);
+      flex-direction: column;
+    }
+  }
+}

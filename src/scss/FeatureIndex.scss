@@ -1,0 +1,40 @@
+@import 'mixin.scss';
+
+.feature-container {
+    padding: 96px null;
+    @include flex(null, 48px);
+    flex-direction: column;
+
+    .feature-header {
+        @include flex(null, 48px);
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            @include font(600, 32px, 40px, black, null);
+        }
+
+        p {
+            @include font(400, 20px, 30px, #667085, null);
+        }
+    }
+
+    .campaigncard-container {
+        @include flex(center, 27px);
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width:764px) {
+    .feature-container {
+        .feature-header {
+            h2 {
+                @include font(600, 32px, 40px, black, 768px);
+            }
+
+            p {
+                @include font(400, 20px, 30px, #667085, 708px);
+            }
+        }
+    }
+}

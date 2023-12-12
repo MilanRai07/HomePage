@@ -1,0 +1,104 @@
+@import 'mixin.scss';
+
+.overlay {
+    background-image: linear-gradient(rgba(0, 41, 83, 0.8), rgba(0, 45, 91, 0.8)), url(../assets/footer.jpg);
+    @include img(center, cover, 480px);
+    padding: 146px 165px;
+    box-sizing: border-box;
+
+    .overlay-container {
+        @include flex(space-between, null);
+        flex-wrap: wrap;
+        align-items: center;
+
+        .overlay-logo-container {
+            .overlay-logo {
+                margin-bottom: 24px;
+
+                .logo {
+                    width: 237px;
+                    height: 71px;
+                }
+            }
+
+            .overlay-text {
+                margin-bottom: 24px;
+                @include font(400, 14px, 21px, #fff, 304px);
+            }
+
+            .overlay-socialmedia {
+                @include flex(null, 16px);
+
+                .twitter,
+                .linkedin,
+                .youtube {
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+
+    .overlay-lists {
+        @include flex(null, 80px);
+        align-items: flex-start;
+
+        .list {
+            h4 {
+                @include font(600, 16px, 20px, #fff, null);
+                margin-bottom: 32px;
+                background-color: red($color: red);
+            }
+
+            ul {
+                padding: 0px;
+                list-style: none;
+                text-decoration: none;
+                display: flex;
+                gap: 16px;
+                flex-direction: column;
+
+                li {
+                    @include font(400, 14px, 18px, #fff, null);
+
+                    &:hover {
+                        color: #F48024;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1079px) {
+    .overlay {
+        @include img(center, cover, auto);
+        padding: 50px 70px;
+
+        .overlay-container {
+            @include flex(center, null);
+            flex-wrap: wrap;
+            align-items: center;
+
+            .overlay-logo-container {
+                .overlay-logo {
+                    text-align: center;
+
+                    .logo {
+                        width: null;
+                    }
+                }
+
+                .overlay-text {
+                    text-align: center;
+                    @include font(400, 14px, 21px, #fff, null);
+                }
+
+                .overlay-socialmedia {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

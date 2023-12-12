@@ -1,0 +1,62 @@
+@import 'mixin.scss';
+
+.drop-menu {
+    @include cardfeature(412px, 320px, 8px, null, 3rem);
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    flex-direction: column;
+    @include position(3.5rem, 0, 29%, 0);
+    background-color: #fff;
+    z-index: 2;
+
+    .drop-point {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        h3 {
+            @include font(bold, 16px, 24px, #101828, null);
+            padding-bottom: 2px;
+        }
+
+        p {
+            @include font(400, 14px, 20px, #667085, null);
+        }
+
+        :hover {
+            background-color: #87CEEB;
+        }
+    }
+}
+
+@media only screen and (max-width:607px) {
+    .drop-menu {
+        @include cardfeature(300px, 320px, 8px, null, 3rem);
+        margin: auto;
+        margin-top: 20px;
+        display: grid;
+        flex-direction: column;
+        @include position(3.5rem, 0, 29%, 0);
+        z-index: 2;
+
+        .drop-point {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 1.5rem;
+
+            h3 {
+                @include font(bold, 16px, 24px, #101828, null);
+                padding-bottom: 2px;
+            }
+
+            p {
+                @include font(400, 14px, 20px, #667085, null);
+            }
+
+            :hover {
+                background-color: #87CEEB;
+            }
+        }
+    }
+}
